@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 public class Home extends AppCompatActivity {
 
@@ -26,6 +27,10 @@ public class Home extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        //Safari Book
+        WebView webView = (WebView) findViewById(R.id.WebView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("file:///android_asset/index.html");
     }
 
     @Override
